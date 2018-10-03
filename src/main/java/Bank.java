@@ -9,8 +9,12 @@
  */
 public class Bank {
 
+    /** The name of the bank */
     private String bankName;
 
+    /**
+     * Will create an instance of the Bank, with the default name of Illini Bank.
+     */
     public Bank() {
         bankName = "Illini Bank";
     }
@@ -75,7 +79,8 @@ public class Bank {
         bankAccount.setOwnerName(name);
     }
 
-    public static int totalAccounts = 0;
+    /** The number of accounts in the bank */
+    private static int totalAccounts = 0;
     /**
      * Uses static variable to get number of bank accounts opened.
      *
@@ -83,6 +88,13 @@ public class Bank {
      */
     public static int getNumberOfAccount() {
         return totalAccounts;
+    }
+
+    /**
+     * Will increase the number of accounts in the bank by one.
+     */
+    public static void addAccount() {
+        totalAccounts++;
     }
 
     /**
